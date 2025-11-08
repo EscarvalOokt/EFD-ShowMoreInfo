@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-using Sirenix.OdinInspector;
 
 namespace ShowMoreInfo
 {
@@ -284,7 +283,7 @@ namespace ShowMoreInfo
                 lines.Add($"${totalValue}");
 
                 // 新增：价重比显示，参考 Waspite102 
-                float weight = item.UnitSelfWeight > 0 ? item.UnitSelfWeight : item.SelfWeight;
+                float weight = item.SelfWeight;
                 if (weight > 0)
                 {
                     float valuePerKg = totalValue / weight;
